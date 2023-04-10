@@ -1,0 +1,58 @@
+.skill-boxes{
+    position: relative;
+    display:grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+    grid-template-columns: repeat(1,1fr);
+    gap: 25px;
+}
+.skill-text,
+.skill-icon,
+.skill-level{
+    position: relative;
+    display: inline-block;
+}
+.skill-box{
+    background: var(--box-bg);
+    box-shadow: var(--box-shadow-5);
+    padding: 20px 24px;
+    border-radius: 12px;
+    transition: all .5s;
+}
+.skill-box:hover{
+    transform: scale(1.025);
+}
+.skill-info{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.level-bar{
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--second-light-bg);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.bar{
+    position: absolute;
+    border-radius: 5px;
+    height: 4px;
+    left: 0;
+    top: 0;
+}
+.skill-boxes.active .bar{
+    animation: level-bar 1.5s ease-in-out;
+}
+@keyframes level-bar {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: attr(data-value);
+    }
+}
+

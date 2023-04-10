@@ -1,0 +1,211 @@
+.project-boxes{
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+}
+.project-box{
+    overflow: hidden;
+    padding: 20px;
+    background-color: var(--box-bg);
+    box-shadow: var(--box-shadow-4);
+    border-radius: 12px;
+    transition: all .25s;
+}
+.project-box:hover{
+    transform: scale(1.025);
+}
+.project-img img{
+    border-radius: 6px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.project-title{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: .9rem;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.project-exp{
+    width: 100%;
+    font-size: .8rem;
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.project-langs{
+    color: var(--light-text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.project-links{
+    position: relative;
+    margin: 10px 0 5px 0;
+}
+.project-links a{
+    font-size: .8rem;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 10px 0 0;
+    transition: all .5s;
+}
+.project-links a i{
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+}
+.project-links a.work-link:hover,
+.project-links a.work-link{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.project-links a:hover{
+    transform: scale(1.05);
+    color: var(--text-color);
+}
+a.project-link{
+    background-color: var(--main-color);
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+}
+a.project-link:hover{
+    color: var(--white);
+}
+a.project-link.gray,
+a.popup-link.gray{
+    display: block;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+.project-hashtag{
+    position: relative;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    border-radius: 5px;
+    font-size: .7rem;
+    padding: 4px 6px;
+}
+
+.project-popup-area{
+    position: fixed;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    z-index: 999999999;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.373);
+    transition: all .3s;
+    opacity: 0;
+    pointer-events: none;
+}
+.project-popup-area.show{
+    opacity: 1;
+    pointer-events: visible;
+}
+.project-popup-box{
+    position: relative;
+    padding: 50px;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+    background-color: var(--box-bg);
+    border-radius: 24px;
+    box-shadow: var(--box-shadow-4);
+    transition: all .3s;
+    transform: scale(0);
+}
+.project-popup-area.show .project-popup-box{
+    transform: scale(1);
+}
+.project-popup-box::-webkit-scrollbar,
+.project-popup-box::-webkit-scrollbar-track,
+.project-popup-box::-webkit-scrollbar-thumb {
+    display: none;
+}
+.popup-img{
+    width: 100%;
+    overflow: hidden;
+}
+.popup-img img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+.popup-content h2{
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin: 15px 0;
+}
+.popup-content p,
+.popup-content ul li,
+.popup-content ol li{
+    list-style: none;
+    font-size: .85rem;
+    color: var(--text-color);
+}
+.popup-content li::before {
+    position: relative;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin-right: 8px;
+    top: -2px;
+    margin-left: -1em;
+}
+.popup-link{
+    position: relative;
+    background-color: var(--main-color);
+    color: var(--white);
+    display: block;
+    text-align: center;
+    font-size: .9rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all .25s;
+    transform: scale(1);
+    margin-top: 15px;
+}
+.popup-link:hover{
+    transform: scale(1.05);
+    color: var(--white);
+}
+.popup-grid-link{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+@media screen and (max-width: 500px) {
+    .popup-img img{
+        height: 150px;
+    }
+    .project-popup-box{
+        padding: 25px;
+    }
+}
