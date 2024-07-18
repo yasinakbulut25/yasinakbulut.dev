@@ -1,4 +1,4 @@
-# Kişisel Portfolyo ([yasinakbulut.com](https://yasinakbulut.com))
+# Kişisel Portfolyo ([yasinakbulut.dev](https://yasinakbulut.dev))
 Kendime özel geliştirdiğim site sayesinde tüm deneyimlerimi, projelerimi, çalışmalarımı, yeteneklerimi ve özgeçmişimi inceleyebilirsiniz. Kişisel Portfolyomda bulunan çalışmalarımı, projelerimi, yeteneklerimi ve özgeçmişimi sıklıkla güncelliyorum.
  
 Sitenin tasarımını ve geliştirilmesini tamamen kendim kodladım. Frontend kısmında HTML, CSS ve JavaScript, Backend kısmında ise PHP PDO ve MySQL veritabanı kullandım. Site içeriklerinin yönetilebilmesi için bir admin paneli de geliştirdim ancak panel dosyalarını buraya eklemedim.  
@@ -12,6 +12,6 @@ Sitenin tasarımını ve geliştirilmesini tamamen kendim kodladım. Frontend k�
 - Siteyi mobil uyumlu (responsive) şekilde kullanabilirsiniz.
 
 ## Site Linki
-Siteyi incelemek isterseniz [yasinakbulut.com](https://yasinakbulut.com) sitesini ziyaret edebilirsiniz. Site hakkındaki görüşlerinizi ve önerilerinizi bana iletebilirsiniz.
+Siteyi incelemek isterseniz [yasinakbulut.dev](https://yasinakbulut.dev) sitesini ziyaret edebilirsiniz. Site hakkındaki görüşlerinizi ve önerilerinizi bana iletebilirsiniz.
 
 ![Kişisel Portfolyo](https://user-images.githubusercontent.com/62993659/230367371-d22a06ef-12b7-425f-bafb-37f680536f9b.png)
