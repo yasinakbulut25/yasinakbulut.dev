@@ -1,4 +1,5 @@
 <?php
+    include "./admin/db_file.php";
     $settingsData = $data->prepare("SELECT * FROM settings where id=?");
     $settingsData->execute(array(1));
     $fetchSettingsData = $settingsData->fetch();
@@ -45,7 +46,7 @@
         }
         header('Location: '.$locationurl);
      }
-?>
+    ?>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -53,19 +54,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canoncial" href="https://yasinakbulut.com/<?= $getLang ?>">
+    <link rel="canoncial" href="https://yasinakbulut.dev/<?= $getLang ?>">
     <meta property="og:title" content="Yasin Akbulut | Jr. Frontend Developer" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://yasinakbulut.com/<?= $getLang ?>" />
-    <meta property="og:image" content="https://yasinakbulut.com/assets/img/main.png" />
+    <meta property="og:url" content="https://yasinakbulut.dev/<?= $getLang ?>" />
+    <meta property="og:image" content="https://yasinakbulut.dev/assets/img/main.png" />
     <meta property="og:description" content = "Frontend alanında kendimi geliştirmekteyim ve ilerleyen süreçte kariyerime bu alanda yön vermeyi hedefliyorum. Birçok web projesi geliştirdim ve geliştirdiğim tüm projelerin tasarımlarını kendim kodladım. Projelerimde Backend olarak PHP PDO kullandım." />
     <meta property="og:site_name" content = "Yasin Akbulut | Jr. Frontend Developer" />
+    <meta name="keywords" content="Yasin Akbulut, Akbulut, Diyet Takibim, CV Oluşturma, Frontend Developer Yasin, Developer Yasin"/>
     <title>Yasin Akbulut | Jr. Frontend Developer</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
-    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/styless.css">
+    <link rel="stylesheet" href="./assets/styles/headerr.css">
     <link rel="stylesheet" href="./assets/styles/experiences.css">
     <link rel="stylesheet" href="./assets/styles/projects.css">
-    <link rel="stylesheet" href="./assets/styles/skills.css">
+    <link rel="stylesheet" href="./assets/styles/skill.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/395342c0da.js" crossorigin="anonymous"></script>
@@ -154,13 +156,13 @@
                 if($allData->rowCount()){
                     $typedAbout = $fetchData['typed'];
                     ?>
-                    <h1 class="main-title"><p id="hello"><?= $fetchData['hello']; ?></p> <?= $fetchData['ıam']; ?> <span class="typed"></span></h1>
+                    <h1 class="main-title"><p id="hello"><?= $fetchData['hello']; ?></p> <span><?= $fetchData['ıam']; ?> <span class="typed"></span></span></h1>
                     <p><?= $fetchData['about']; ?></p>
-                    <a href="<?= "https://yasinakbulut.com/cv/" . $cvPDF ?>" download="" class="cv-link">
+                    <a href="https://me.yasinakbulut.dev/" target='_blank' class="cv-link">
                         <span class="cv-text"><?= $fetchData['download']; ?></span> 
                         <div class="cv-hover-text">
                             <span><?= $fetchData['downloadHover']; ?></span>
-                            <i class="bi bi-download"></i>
+                            <i class="bi bi-person"></i>
                         </div>
                     </a>
                     <p class="cv-exp">
@@ -480,9 +482,9 @@
 
 
     <script src="./assets/js/type.js"></script>
-    <script src="./assets/js/skillCounterr.js"></script>
+    <script src="./assets/js/skillCounte.js"></script>
     <script src="./assets/js/colors.js"></script>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/scriptts.js"></script>
     <script>
         <?= $typedAbout ?>
     </script>

@@ -1,11 +1,11 @@
 const skillArea = document.querySelector(".skill-boxes");
 
 const skillValues = [
-    ['orange','#ff733c','fa-brands fa-html5','HTML',94],
-    ['blue','#3f80ea','fa-brands fa-css3-alt','CSS',91],
-    ['yellow','#f8de39','fa-brands fa-js','JS',63],
-    ['turquoise','#61DBFB','fa-brands fa-react','React JS',55],
-    ['red','#ff3c3c','fa-brands fa-bootstrap','Bootstrap',85],
+    ['orange','#ff733c','fa-brands fa-html5','HTML',95],
+    ['blue','#3f80ea','fa-brands fa-css3-alt','CSS & SCSS',91],
+    ['yellow','#f8de39','fa-brands fa-js','JS',70],
+    ['turquoise','#61DBFB','fa-brands fa-react','React JS',75],
+    ['red','#ff3c3c','fa-brands fa-bootstrap','Bootstrap',90],
     ['purple','#8d4bbf','fa-brands fa-php','PHP-PDO',80],
     ['green','#4bbf73','fa-solid fa-database','MySql',60],
 ]

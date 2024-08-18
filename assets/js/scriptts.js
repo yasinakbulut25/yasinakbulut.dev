@@ -34,6 +34,7 @@ function showMenu(clickLabel) {
     });
 }
 
+
 // Change Theme
 let themeMode;
 const modeBtn = document.querySelector(".mode-btn");
@@ -45,6 +46,7 @@ if(localStorage.getItem("theme")){
 }
 modeBtn.classList.add(themeMode);
 document.querySelector("body").className = themeMode;
+
 function changeTheme(){
 
     if(themeMode == "light"){
@@ -62,8 +64,9 @@ function changeTheme(){
     }
     
     // Değerlere göre CV linki ayarla
-    cvLink();
+    // cvLink();
 }
+
 
 // Poject Open Popup
 function showPopup(popupId,popupType){

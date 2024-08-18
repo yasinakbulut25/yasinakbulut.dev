@@ -156,6 +156,8 @@ body.dark .mode-btn{
     z-index: 9;
 }
 .mode-btn{
+    width: 38px;
+    height: 38px;
     top: 13px;
     overflow: hidden;
 }
@@ -163,6 +165,10 @@ body.dark .mode-btn{
     position: relative;
     top: -40px;
     transition: all .25s;
+}
+.light-icon i{
+    position: relative;
+    left: -2px;
 }
 .dark-icon{
     position: absolute;
@@ -319,6 +325,8 @@ body.dark .mode-btn{
         padding: 8px 12px;
     }
     .mode-btn{
+        width: auto;
+        height: auto;
         margin-left: 20px;
         display: block;
         top: 0;

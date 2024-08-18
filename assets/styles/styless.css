@@ -40,6 +40,25 @@ body.dark{
 
     --box-shadow-5: 0 0 1rem 0 rgba(79, 81, 88, 0.1);
 }
+/*
+@media (prefers-color-scheme: dark) {
+    :root{
+        --text-color: #f6f2f2;
+        --light-text-color: #b7b7b8;
+        --second-light-text-color: #ececec;
+    
+    
+        --body-bg:#111827;
+        --box-bg: #172031;
+        --light-bg: #202837;
+        --second-light-bg: #ffffff1f;
+        --white: #fff;
+        --black: #121212;
+    
+        --box-shadow-5: 0 0 1rem 0 rgba(79, 81, 88, 0.1);
+    }
+}
+*/
 *{
     margin: 0;
     padding: 0;
@@ -99,7 +118,7 @@ section{
 main{
     position: relative;
     display: grid;
-    margin-top: 150px;
+    margin-top: 120px;
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
 }
 .main-bg{
@@ -133,7 +152,11 @@ main{
 .main-content h1{
     font-weight: 600;
     font-size: 2.75rem;
-    color: var(--text-color)
+    color: var(--text-color);
+    min-height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .main-content h1 .typed{
     color: var(--main-color)
@@ -148,7 +171,7 @@ main{
     display: none;
 }
 .main-content p{
-    margin: 40px 0;
+    margin: 0 0 40px 0;
     color: var(--text-color);
     font-size: .9rem;
 }
@@ -280,7 +303,15 @@ footer{
     font-size: .9rem;
     color: var(--light-text-color)
 }
+@media screen and (max-width: 1200px) {
+    main{
+        margin-top: 75px;
+    }
+}
 @media screen and (max-width: 900px) {
+    main{
+        margin-top: 50px;
+    }
     .grid-section{
         grid-template-columns: repeat(1,1fr);
     }
@@ -292,7 +323,6 @@ footer{
 }
 @media screen and (max-width: 500px) {
     main{
-        margin-top: 50px;
         grid-template-columns: repeat(auto-fit, minmax(100%,1fr)) !important;
     }
 }
